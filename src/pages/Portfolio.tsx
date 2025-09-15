@@ -33,7 +33,7 @@ export function Portfolio() {
     certificates
   } = profile;
   const programmingLanguages = skills.filter(skill => skill.category === 'language');
-  const frameworksAndtoolss = skills.filter(skill => skill.category === 'framework' || skill.category === 'tools');
+  const frameworksAndTools = skills.filter(skill => skill.category === 'framework' || skill.category === 'tools');
   return <div className="max-w-7xl mx-auto">
       {/* Header/Personal Info Section */}
       <section aria-labelledby="personal-info-heading" className="bg-white rounded-lg shadow-md p-6 mb-8">
@@ -139,10 +139,10 @@ export function Portfolio() {
           </div>
           <div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">
-              Frameworks & toolss
+              Frameworks & tools
             </h3>
             <div className="space-y-3">
-              {frameworksAndtoolss.map(skill => <div key={skill.name}>
+              {frameworksAndTools.map(skill => <div key={skill.name}>
                   <div className="flex justify-between mb-1">
                     <span className="text-gray-700" id={`skill-${skill.name.toLowerCase().replace(/\s+/g, '-')}`}>
                       {skill.name}
